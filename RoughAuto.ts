@@ -1,6 +1,6 @@
 import * as readline from "readline";
 import fetch from 'node-fetch';
-import { ReadableStream } from 'node:stream/web'; // Import the ReadableStream type
+import { ReadableStream } from 'web-streams-polyfill/ponyfill/es2018'; // Import the ReadableStream type
 
 const model = "llama 2";
 
