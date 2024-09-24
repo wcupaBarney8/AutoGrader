@@ -3,17 +3,12 @@ name: Autograding with Ollama Feedback
 on: [push]
 
 jobs:
-  autograde:
+  build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
+    - name: Print workspace path
+      run: echo "Workspace path is $GITHUB_WORKSPACE"
         python -m pip install --upgrade pip
         pip install requests
     - name: Process assignment
